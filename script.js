@@ -298,6 +298,10 @@ document.addEventListener('keypress', (event) => {
   {
     spawnBall(new Vector2(mouseX, mouseY), getRandomInt(100) + 100, hsvToRgb(getRandomInt(100)/100, 1, 1), false)
   }
+  if (name == ' ')
+  {
+    spawnBall(new Vector2(mouseX, mouseY), getRandomInt(100) + 400, hsvToRgb(getRandomInt(100)/100, 1, 1), false)
+  }
   if (name == 'c')
   {
     spawnBall(new Vector2(mouseX, mouseY), getRandomInt(100) + 100, 'Black', true)
