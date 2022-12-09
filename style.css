@@ -1,1 +1,10 @@
 html, body {margin: 0; height: 100%; width: 100%; overflow: hidden}
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+      z-index: 1;
+      position: relative;
+  }
