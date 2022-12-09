@@ -8,7 +8,7 @@ const width = window.innerWidth;
 const height = window.innerHeight;
 
 // CONFIG
-const STAGE_RADIUS = 2500;
+var STAGE_RADIUS = 2500;
 const GRAVITY = 1
 const COLLISION_STEPS = 10;
 
@@ -298,10 +298,6 @@ document.addEventListener('keypress', (event) => {
   {
     spawnBall(new Vector2(mouseX, mouseY), getRandomInt(100) + 100, hsvToRgb(getRandomInt(100)/100, 1, 1), false)
   }
-  if (name == 'b')
-  {
-    spawnBall(new Vector2(mouseX, mouseY), getRandomInt(100) + 400, hsvToRgb(getRandomInt(100)/100, 1, 1), false)
-  }
   if (name == 'c')
   {
     spawnBall(new Vector2(mouseX, mouseY), getRandomInt(100) + 100, 'Black', true)
@@ -331,4 +327,11 @@ document.addEventListener('mousemove', logKey)
 function logKey(e) {
   mouseX = e.clientX * CANVAS_SCALE
 	mouseY = e.clientY * CANVAS_SCALE
+}
+
+var slider = document.getElementById("range");
+
+
+slider.oninput = function() {
+  STAGE_RADIUS = this.value
 }
